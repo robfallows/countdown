@@ -1,0 +1,19 @@
+<head>
+  <title>simple</title>
+</head>
+
+<body>
+  {{> showTimers}}
+</body>
+
+<template name="showTimers">
+  {{#each timers}}
+    <div>
+      <span>{{remains}}</span>
+      {{#if notFinished}}
+        <button class="{{buttonClass}}">{{buttonLabel}}</button>
+      {{/if}}
+    </div>
+  {{/each}}
+  <div><button class="new">+</button></div>
+</template>
